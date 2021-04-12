@@ -36,11 +36,20 @@ function romNumRec(num) {
     const updatedNum = num - 5;
     return (num === 9) ? "IX" : 'V' + romNumRec(updatedNum);
   } else if (num < 50) {
-    const numOfTens = parseInt(num / 10);
+    const numOfXs = parseInt(num / 10);
     const updatedNum = num % 10;
-    return ((numOfTens === 4) ? "XL" : "X".repeat(numOfTens)) + romNumRec(updatedNum);
+    return ((numOfXs === 4) ? "XL" : "X".repeat(numOfXs)) + romNumRec(updatedNum);
+  } else if (num < 100) {
+    const updatedNum = (num >= 90) ? num - 90 : num - 50;
+    return ((num >= 90) ? "XC" : "L") + romNumRec(updatedNum);
   }
 }
+
+// please this?
+
+close
+95 = XCXLV
+
 
 
 // function recursionRomanNumeral(num) {

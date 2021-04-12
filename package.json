@@ -1,7 +1,7 @@
 {
-  "name": "react-template",
+  "name": "roman-numerals",
   "version": "1.0.0",
-  "description": "",
+  "description": "Convert numbers into roman numerals",
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -14,7 +14,7 @@
     "coverageReporters": ["html"]
   },
   "keywords": [],
-  "author": "Mike Pingel",
+  "author": "Mike Pingel, Daniel Adeyemi, Louie Schoenknecht",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",

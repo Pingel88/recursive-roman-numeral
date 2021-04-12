@@ -31,14 +31,14 @@ function romanNumerals(input) {
 
 function romNumRec(num) {
   if (num < 5) {
-    return "I".repeat(num);
+    return (num === 4) ? "IV" : "I".repeat(num);
   } else if (num < 10) {
     const updatedNum = num - 5;
-    return 'V' + romNumRec(updatedNum);
+    return (num === 9) ? "IX" : 'V' + romNumRec(updatedNum);
   } else if (num < 50) {
     const numOfTens = parseInt(num / 10);
     const updatedNum = num % 10;
-    return "X".repeat(numOfTens) + romNumRec(updatedNum);
+    return ((numOfTens === 4) ? "XL" : "X".repeat(numOfTens)) + romNumRec(updatedNum);
   }
 }
 

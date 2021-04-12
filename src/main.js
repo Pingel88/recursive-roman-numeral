@@ -42,6 +42,10 @@ function romNumRec(num) {
   } else if (num < 100) {
     const updatedNum = (num >= 90) ? num - 90 : num - 50;
     return ((num >= 90) ? "XC" : "L") + romNumRec(updatedNum);
+  } else if (num < 500) {
+    const numOfCs = parseInt(num / 100);
+    const updatedNum = num % 100;
+    return ((numOfCs === 4) ? "CD" : "C".repeat(numOfCs)) + romNumRec(updatedNum);
   }
 }
 

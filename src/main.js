@@ -30,7 +30,32 @@ function romanNumerals(input) {
 }
 
 function romNumRec(num) {
-  if (num < 4) {
+  if (num < 5) {
     return "I".repeat(num);
+  } else if (num < 10) {
+    const updatedNum = num - 5;
+    return 'V' + romNumRec(updatedNum);
   }
 }
+
+
+// function recursionRomanNumeral(num) {
+//   if (isNaN(num)) {
+//     return ` Invalid input `;
+//   }
+//   if (num < 5) {
+//     return "I".repeat(num);
+//   } else if (num < 10) {
+//     const newNum = num % 5;
+//     const nickels = parseInt(cents / 5);
+//     return recursionCoinCounter(newChange) + `| Nickels: ${nickels} |`;
+//   } else if (cents < 25) {
+//     const newChange = cents % 10 / 100;
+//     const dimes = parseInt(cents / 10);
+//     return recursionCoinCounter(newChange) + `| Dimes: ${dimes} |`;
+//   } else {
+//     const newChange = cents % 25 / 100;
+//     const quarters = parseInt(cents / 25);
+//     return recursionCoinCounter(newChange) + `| Quarters: ${quarters} |`;
+//   }
+// }

@@ -35,6 +35,10 @@ function romNumRec(num) {
   } else if (num < 10) {
     const updatedNum = num - 5;
     return 'V' + romNumRec(updatedNum);
+  } else if (num < 50) {
+    const numOfTens = parseInt(num / 10);
+    const updatedNum = num % 10;
+    return "X".repeat(numOfTens) + romNumRec(updatedNum);
   }
 }
 
